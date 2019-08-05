@@ -18,7 +18,7 @@ Login
 var tiempo = '1h';
 var seed = 'proyecto_desarrollo';
 
-app.post('/signin', (req, res) => {
+app.post('/users/login', (req, res) => {
 
     var request = req.body;
 
@@ -86,7 +86,7 @@ app.post('/signin', (req, res) => {
 //rutas para el usuario
 
 // crear un usuario
-app.post('/signup', (req, res) => {
+app.post('/user/create', (req, res) => {
     var request = req.body;
 
     let usuario = new user({

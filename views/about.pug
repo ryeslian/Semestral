@@ -4,49 +4,92 @@ block  contenido
 
     doctype html
     //
-        Transit by TEMPLATED
+        Theory by TEMPLATED
         templated.co @templatedco
         Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
     head
-        meta(charset='UTF-8')
-        title Transit by TEMPLATED
-        meta(http-equiv='content-type', content='text/html; charset=utf-8')
-        meta(name='description', content='')
-        meta(name='keywords', content='')
-        //if lte IE 8
-            script(src='js/html5shiv.js')
-        script(src='/public/vendors/js/html5shiv.js')
-        
-        noscript
-            link(rel='stylesheet', href='/public/vendors/css/skel.css')
-            link(rel='stylesheet', href='/public/vendors/css/style.css')
-            link(rel='stylesheet', href='/public/vendors/css/style-xlarge.css')
+        title Theory by TEMPLATED
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='public/assets/css/main.css')
+    // Header
+
+    // Banner
+    section#banner
+        h1 Welcome to Hourglass Industries
+        p A free world of opportunities.
+
     // Two
-    section#two.wrapper.style2.special
-        .container
-            header.major
-                h2 Lorem ipsum dolor sit
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, autem.
-            section.profiles
-                .row
-                    section.3u.profile(class='6u(medium) 12u$(xsmall)')
-                        img(src='images/profile_placeholder.gif', alt='')
-                        h4 Lorem ipsum
-                        p Lorem ipsum dolor
-                    section.3u.profile(class='6u$(medium) 12u$(xsmall)')
-                        img(src='images/profile_placeholder.gif', alt='')
-                        h4 Voluptatem dolores
-                        p Ullam nihil repudi
-                    section.3u.profile(class='6u(medium) 12u$(xsmall)')
-                        img(src='images/profile_placeholder.gif', alt='')
-                        h4 Doloremque quo
-                        p Harum corrupti quia
-                    section.profile(class='3u$ 6u$(medium) 12u$(xsmall)')
-                        img(src='images/profile_placeholder.gif', alt='')
-                        h4 Voluptatem dicta
-                        p Et natus sapiente
-            footer
-                p
-                ul.actions
+    section#two.wrapper.style1.special
+        .inner
+            header
+                h2 Desarrolladores
+                p Semper suscipit posuere apede
+            .flex.flex-4
+                .box.person
+                    .image.round
+                        img(src='public/images/pic03.jpeg', alt='Person 1')
+                    h3 Liandrison
+                    p Cipdum dolor
+                .box.person
+                    .image.round
+                        img(src='public/images/pic04.jpg', alt='Person 2')
+                    h3 Rosilyn
+                    p Vestibulum comm
+                .box.person
+                    .image.round
+                        img(src='public/images/pic05.jpg', alt='Person 3')
+                    h3 Erick
+                    p Fusce pellentes
+
+    // Three
+    section#three.wrapper.special
+        .inner
+            header.align-center
+                h2 Nunc Dignissim
+                p Aliquam erat volutpat nam dui 
+            .flex.flex-2
+                article
+                    .image.fit
+                        img(src='public/images/pic01.jpg', alt='Pic 01')
+                    header
+                        h3 Praesent placerat magna
+                    p
+                    footer
+                        a.button.special(href='#') More
+                article
+                    .image.fit
+                        img(src='public/images/pic02.jpg', alt='Pic 02')
+                    header
+                        h3 Fusce pellentesque tempus
+                    p
+                    footer
+                        a.button.special(href='#') More
+    // Footer
+    footer#footer
+        .inner
+            .flex
+                .copyright
+                    a(href='https://templated.co') TEMPLATED
+                    a(href='https://unsplash.com') Unsplash
+                ul.icons
                     li
-                        a.button.big(href='#') Lorem ipsum dolor sit
+                        a.icon.fa-facebook(href='#')
+                            span.label Facebook
+                    li
+                        a.icon.fa-twitter(href='#')
+                            span.label Twitter
+                    li
+                        a.icon.fa-linkedin(href='#')
+                            span.label linkedIn
+                    li
+                        a.icon.fa-pinterest-p(href='#')
+                            span.label Pinterest
+                    li
+                        a.icon.fa-vimeo(href='#')
+                            span.label Vimeo
+    // Scripts
+    script(src='public/assets/js/jquery.min.js')
+    script(src='public/aassets/js/skel.min.js')
+    script(src='public/aassets/js/util.js')
+    script(src='public/aassets/js/main.js')

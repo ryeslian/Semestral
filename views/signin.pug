@@ -2,6 +2,7 @@
 block contenido
 
 link(rel="stylesheet", href="/public/vendors/css/login.css")
+//link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
 svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='800px', height='600px', viewbox='0 0 800 600', enable-background='new 0 0 800 600', xml:space='preserve')
     lineargradient#SVGID_1_(gradientunits='userSpaceOnUse', x1='174.7899', y1='186.34', x2='330.1259', y2='186.34', gradienttransform='matrix(0.8538 0.5206 -0.5206 0.8538 147.9521 -79.1468)')
         stop(offset='0', style='stop-color:#FFC035')
@@ -29,34 +30,34 @@ svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http
 .container
     h2 login
     form
-        input.email(type='text', placeholder='name' id='nombre')
+        input.email(type='name', placeholder='name' id='nombre')
         br
-        input.pwd(type='text', placeholder='Apellido' id='apellido')
+        input.pwd(type='apellido', placeholder='Apellido' id='apellido')
         
         br
         input.email(type='email', placeholder='email' id='email')
         
         br
-        input.pwd(type='', placeholder='password' id='password')
+        input.email(type='password', placeholder='password' id='password')
         
         br
-        input.email(type='text', placeholder='Direccion' id='direccion')
+        input.email(type='direccion', placeholder='Direccion' id='direccion')
         
         br
-        input.email(type='text', placeholder='Pais' id='pais')
+        input.email(type='pais', placeholder='Pais' id='pais')
         
     //a.link(href='/user/login')
     br
     button.register(action='/signin' method='POST')
         span register
-    button.signin(method='POST')
+    button.signin(action='user/create' method='POST')
         span sign in 
         a.link(href='/profile')
     br
     br
     button
         span Atras
-        a(href="/index")
+        a.link(href="/")
     br
     h3.reg your registration is complete !    
     h3.sig your sign in is complete !
@@ -65,7 +66,7 @@ svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http
 
 
     script(src="/public/vendors/js/login.js")
-    //script(src='backend/peticiones/router.js')
+    script(src='backend/peticiones/router.js')
     script(src='backend/signin.js')
             
             

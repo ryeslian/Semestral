@@ -16,14 +16,24 @@
         },
         Handlers: {
             OnClick: function(event) {
+                var data = {
+                    nombre: nombre, 
+                    apellido: apellido,
+                    email: email,
+                    password: password,
+                    direccion: direccion,
+                    pais: pais
+            
+                }
                 event.preventDefault();
                 console.log(event);
                 var data = App.Controls.email.value;
                 console.log(data);
                 $.ajax({
-                        type: 'GET',
-                        url: '/product/create',
-
+                        type: 'POST',
+                        url: '/user/create',
+                        data:data
+                        
 
                     }).then(function(res) {
                         let data ;
@@ -48,19 +58,70 @@
             },
             OnClear: function() {
                 App.Controls.value = '';
-                App.Controls.password.innerHTML = ``;
+                App.Controls.data.innerHTML = ``;
                 App.Controls.nombre.innerHTML = ``;
             },
+            OnClick: function(event) {
+                var data = {
+                    nombre: nombre, 
+                    apellido: apellido,
+                    email: email,
+                    password: password,
+                    direccion: direccion,
+                    pais: pais
+            
+                }
+                event.preventDefault();
+                console.log(event);
+                var data = App.Controls.email.value;
+                console.log(data);
+                $.ajax({
+                        type: 'GET',
+                        url: '/user/create',
+                        data:data
+                        
+
+                    }).then(function(res) {
+                        let data ;
+                        if (res.data != null) {
+                            data.forEach(e => {
+                                contents += 'existe'
+                                
+                            });
+                        } else {
+                            App.Controls.email.innerHTML = `No existe`;
+                            App.Controls.password.innerHTML = ` `;
+                        }
+
+                        console.log(res);
+                    })
+                    .catch(
+                        function(error) {
+                            App.Controls.email.innerHTML = error;
+                        }
+                    );
+                console.log(event);
+            },
+            OnClear: function() {
+                App.Controls.value = '';
+                App.Controls.data.innerHTML = ``;
+                App.Controls.nombre.innerHTML = ``;
+            },
+            OnClick: function(event) {
+                var data = {
+                    nombre: nombre, 
+                    apellido: apellido,
+                    email: email,
+                    password: password,
+                    direccion: direccion,
+                    pais: pais
+            
+                }
+               
+                
+            
             //arreglo
-            data: {
-                nombre, 
-                apellido,
-                email,
-                password,
-                direccion,
-                pais
-        
-            }
+            
 
         },
         Methods: {
