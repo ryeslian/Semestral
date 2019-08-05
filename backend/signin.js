@@ -1,3 +1,4 @@
+
 (function() {
     var App = {
         Data: {},
@@ -50,12 +51,22 @@
                 App.Controls.password.innerHTML = ``;
                 App.Controls.nombre.innerHTML = ``;
             },
+            //arreglo
+            data: {
+                nombre, 
+                apellido,
+                email,
+                password,
+                direccion,
+                pais
+        
+            }
 
         },
         Methods: {
             init: function() {
                 App.Methods.initExceptions();
-                App.Methods.OnCalcular();
+                App.Methods.OnClick();
                 App.Methods.OnClear();
             },
             initExceptions: function() {
@@ -63,8 +74,8 @@
                     return `[${this.date}] ${this.name}: ${this.message}`;
                 };
             },
-            OnCalcular: function() {
-                App.Controls.calcular.addEventListener('click', App.Handlers.OnClick)
+            OnClick: function() {
+                App.Controls.data.addEventListener('click', App.Handlers.OnClick)
             },
             OnClear: function() {
                 App.Controls.limpiar.addEventListener('click', App.Handlers.OnClear);
@@ -80,14 +91,6 @@
             }
         },
     }
-    data: {
-        nombre, 
-        apellido,
-        email,
-        password,
-        direccion,
-        pais
-
-    }
+    
     App.Methods.init();
 })();

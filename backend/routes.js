@@ -13,8 +13,8 @@ app.get('/signin', (req, res) => {
     });
 });
 
-app.get('/product/create', (req, res) => {
-    res.render('product/create', {
+app.get('/product', (req, res) => {
+    res.render('product/product', {
         //message: req.flash('signinMessage')
     });
 });
@@ -32,7 +32,7 @@ app.post('/signup', passport.authenticate('local-signup', {
 app.get('/profile', isLoggedIn, (req, res) => {
     res.render('profile', {
         user: req.user
-        
+        //
     });    
     
 });
