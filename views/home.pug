@@ -1,0 +1,493 @@
+extends base.pug
+
+block contenido
+
+    doctype html
+    head
+        meta(charset='UTF-8')
+        meta(name='description', content='')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        // The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags
+        // Title
+        title HourGlass
+        // Favicon
+        link(rel='icon', href='/public/vendors/img/core-img/favicon.ico')
+        // Core Style CSS
+        link(rel='stylesheet', href='/public/vendors/css/core-style.css')
+        link(rel='stylesheet', href='style.css')
+    // ##### Header Area Start #####
+    header.header_area
+    p 
+    p 
+    p
+    p 
+    p
+    p 
+    p 
+    p 
+    p 
+    p 
+
+    // ##### Breadcumb Area Start #####
+    .breadcumb_area.bg-img(style='background-image: url(/public/vendors/img/bg-img/breadcumb.jpg);')
+        .container.h-100
+            .row.h-100.align-items-center
+                .col-12
+                    .page-title.text-center
+                        h2 Watches
+    // ##### Breadcumb Area End #####
+    // ##### Shop Grid Area Start #####
+    section.shop_grid_area.section-padding-80
+        .container
+            .row
+                .col-12.col-md-4.col-lg-3
+                    .shop_sidebar_area
+                        // ##### Single Widget #####
+                        .widget.catagory.mb-50
+                            // Widget Title
+                            h6.widget-title.mb-30 Categorias
+                            // Catagories
+                            .catagories-menu
+                                ul#menu-content2.menu-content.collapse.show
+                                    // Single Item
+                                    li(data-toggle='collapse', data-target='#clothing')
+                                        a(href='#') Relojes
+                                        ul#clothing.sub-menu.collapse.show
+                                            li
+                                                a(href='#') All
+                                            li
+                                                a(href='#') Relojes de Pulsera
+                                            li
+                                                a(href='#') Correas de Relog
+                                            li
+                                                a(href='#') Relojes de Bolsillo
+                                            li
+                                                a(href='#') Relojes inteligentes
+                                            li
+                                                a(href='#') Usados Certificados
+
+                                    // Single Item
+                                    li.collapsed(data-toggle='collapse', data-target='#shoes')
+                                        a(href='#') shoes
+                                        ul#shoes.sub-menu.collapse
+                                            li
+                                                a(href='#') All
+                                            li
+                                                a(href='#') Relojes de Pulsera
+                                            li
+                                                a(href='#') Correas de Relog
+                                            li
+                                                a(href='#') Relojes de Bolsillo
+                                            li
+                                                a(href='#') Relojes inteligentes
+                                            li
+                                                a(href='#') Usados Certificados
+
+                                    // Single Item
+                                    li.collapsed(data-toggle='collapse', data-target='#accessories')
+                                        a(href='#') accessories
+                                        ul#accessories.sub-menu.collapse
+                                            li
+                                                a(href='#') All
+                                            li
+                                                a(href='#') Relojes de Pulsera
+                                            li
+                                                a(href='#') Correas de Relog
+                                            li
+                                                a(href='#') Relojes de Bolsillo
+                                            li
+                                                a(href='#') Relojes inteligentes
+                                            li
+                                                a(href='#') Usados Certificados
+
+                        // ##### Single Widget #####
+                        .widget.price.mb-50
+                            // Widget Title
+                            h6.widget-title.mb-30 Filter by
+                            // Widget Title 2
+                            p.widget-title2.mb-30 Price
+                            .widget-desc
+                                .slider-range
+                                    .slider-range-price.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all(data-min='49', data-max='360', data-unit='$', data-value-min='49', data-value-max='360', data-label-result='Range:')
+                                        .ui-slider-range.ui-widget-header.ui-corner-all
+                                        span.ui-slider-handle.ui-state-default.ui-corner-all(tabindex='0')
+                                        span.ui-slider-handle.ui-state-default.ui-corner-all(tabindex='0')
+                                    .range-price Range: $49.00 - $360.00
+                        // ##### Single Widget #####
+                        .widget.color.mb-50
+                            // Widget Title 2
+                            p.widget-title2.mb-30 Color de la Correa
+                            .widget-desc
+                                ul.d-flex
+                                    li
+                                        a.color1(href='#')
+                                    li
+                                        a.color2(href='#')
+                                    li
+                                        a.color3(href='#')
+                                    li
+                                        a.color4(href='#')
+                                    li
+                                        a.color5(href='#')
+                                    li
+                                        a.color6(href='#')
+                                    li
+                                        a.color7(href='#')
+                                    li
+                                        a.color8(href='#')
+                                    li
+                                        a.color9(href='#')
+                                    li
+                                        a.color10(href='#')
+                        // ##### Single Widget #####
+                        .widget.brands.mb-50
+                            // Widget Title 2
+                            p.widget-title2.mb-30 Brands
+                            .widget-desc
+                                ul
+                                    li
+                                        a(href='https://www.amazon.com/s?bbn=6358540011&rh=n%3A7141123011%2Cn%3A7147441011%2Cn%3A6358539011%2Cn%3A6358540011%2Cp_89%3ACitizen&dc&fst=as%3Aoff&qid=1564799739&rnid=2528832011&ref=lp_6358540011_nr_p_89_0') Citizen
+                                    li
+                                        a(href='https://www.amazon.com/s?bbn=6358540011&rh=n%3A7141123011%2Cn%3A7147441011%2Cn%3A6358539011%2Cn%3A6358540011%2Cp_89%3ABulova&dc&fst=as%3Aoff&qid=1564800510&rnid=2528832011&ref=lp_6358540011_nr_p_89_4') Bulova
+                                    li
+                                        a(href='https://www.amazon.com/s?bbn=6358540011&rh=n%3A7141123011%2Cn%3A7147441011%2Cn%3A6358539011%2Cn%3A6358540011%2Cp_89%3AInvicta&dc&fst=as%3Aoff&qid=1564800536&rnid=2528832011&ref=lp_6358540011_nr_p_89_3') Invicta
+                                    li
+                                        a(href='https://www.amazon.com/s?bbn=6358540011&rh=n%3A7141123011%2Cn%3A7147441011%2Cn%3A6358539011%2Cn%3A6358540011%2Cp_89%3APALADA&dc&fst=as%3Aoff&qid=1564800557&rnid=2528832011&ref=lp_6358540011_nr_p_89_6') Palada
+                                    li
+                                        a(href='https://www.amazon.com/s?bbn=6358540011&rh=n%3A7141123011%2Cn%3A7147441011%2Cn%3A6358539011%2Cn%3A6358540011%2Cp_89%3ACasio&dc&fst=as%3Aoff&qid=1564800583&rnid=2528832011&ref=lp_6358540011_nr_p_89_5') Casio
+                .col-12.col-md-8.col-lg-9
+                    .shop_grid_product_area
+                        .row
+                            .col-12
+                                .product-topbar.d-flex.align-items-center.justify-content-between
+                                    // Total Products
+                                    .total-products
+                                        p
+                                            span 186
+                                    // Sorting
+                                    .product-sorting.d-flex
+                                        p Sort by:
+                                        form(action='#', method='get')
+                                            select#sortByselect(name='select')
+                                                option(value='value') Highest Rated
+                                                option(value='value') Newest
+                                                option(value='value') Price: $$ - $
+                                                option(value='value') Price: $ - $$
+                                            input.d-none(type='submit', value='')
+                        .row
+                            // Single Product
+                            .col-12.col-sm-6.col-lg-4
+                                .single-product-wrapper
+                                    // Product Image
+                                    .product-img
+                                        img(src='/public/vendors/img/product-img/product-1.jpg', alt='')
+                                        // Hover Thumb
+                                        img.hover-img(src='/public/vendors/img/product-img/product-11.jpg', alt='')
+                                        // Product Badge
+                                        .product-badge.offer-badge
+                                            span -30%
+                                        // Favourite
+                                        .product-favourite
+                                            a.favme.fa.fa-heart(href='#')
+                                    // Product Description
+                                    .product-description
+                                        span Diesel
+                                        a(href='single-product-details.html')
+                                            h6 Reloj negro para hombre Diesel DZ4318 Mega Chief Black Ip
+                                        p.product-price
+                                            span.old-price US$ 146.26
+                                        // Hover Content
+                                        .hover-content
+                                            // Add to Cart
+                                            .add-to-cart-btn
+                                                a.btn.essence-btn(href='#') Add to Cart
+                            // Single Product
+                            .col-12.col-sm-6.col-lg-4
+                                .single-product-wrapper
+                                    // Product Image
+                                    .product-img
+                                        img(src='/public/vendors/img/product-img/product-2.jpg', alt='')
+                                        // Hover Thumb
+                                        img.hover-img(src='/public/vendors/img/product-img/product-22.jpg', alt='')
+                                        // Favourite
+                                        .product-favourite
+                                            a.favme.fa.fa-heart(href='#')
+                                    // Product Description
+                                    .product-description
+                                        span Vigor
+                                        a(href='single-product-details.html')
+                                            h6 Vigor Rigger - Reloj analógico de cuarzo para hombre, minimalista, ultra fino, para hombre con fecha
+                                        p.product-price $80.00
+                                        // Hover Content
+                                        .hover-content
+                                            // Add to Cart
+                                            .add-to-cart-btn
+                                                a.btn.essence-btn(href='#') Add to Cart
+                            // Single Product
+                            .col-12.col-sm-6.col-lg-4
+                                .single-product-wrapper
+                                    // Product Image
+                                    .product-img
+                                        img(src='/public/vendors/img/product-img/product-3.jpg', alt='')
+                                        // Hover Thumb
+                                        img.hover-img(src='img/product-img/product-33.jpg', alt='')
+                                        // Product Badge
+                                        .product-badge.new-badge
+                                            span New
+                                        // Favourite
+                                        .product-favourite
+                                            a.favme.fa.fa-heart(href='#')
+                                    // Product Description
+                                    .product-description
+                                        span Diesel SmartWatch
+                                        a(href='single-product-details.html')
+                                            h6 Diesel On Men's Smartwatch Powered with Wear OS by Google with Heart Rate, GPS, NFC, and Smartphone Notifications
+                                        p.product-price $380.00
+                                        // Hover Content
+                                        .hover-content
+                                            // Add to Cart
+                                            .add-to-cart-btn
+                                                a.btn.essence-btn(href='#') Add to Cart
+                            // Single Product
+                            .col-12.col-sm-6.col-lg-4
+                                .single-product-wrapper
+                                    // Product Image
+                                    .product-img
+                                        img(src='/public/vendors/img/product-img/product-4.jpg', alt='')
+                                        // Hover Thumb
+                                        img.hover-img(src='/public/vendors/img/product-img/product-44.jpg', alt='')
+                                        // Favourite
+                                        .product-favourite
+                                            a.favme.fa.fa-heart(href='#')
+                                    // Product Description
+                                    .product-description
+                                        span Invicta
+                                        a(href='single-product-details.html')
+                                            h6 Invicta Men's Pro Diver Collection Chronograph 18k Gold-Plated Watch with Link Bracelet
+                                        p.product-price $94.00
+                                        // Hover Content
+                                        .hover-content
+                                            // Add to Cart
+                                            .add-to-cart-btn
+                                                a.btn.essence-btn(href='#') Add to Cart
+                            // Single Product
+                            .col-12.col-sm-6.col-lg-4
+                                .single-product-wrapper
+                                    // Product Image
+                                    .product-img
+                                        img(src='/public/vendors/img/product-img/product-5.jpg', alt='')
+                                        // Hover Thumb
+                                        img.hover-img(src='/public/vendors/img/product-img/product-55.jpg', alt='')
+                                        // Product Badge
+                                        .product-badge.offer-badge
+                                            span -30%
+                                        // Favourite
+                                        .product-favourite
+                                            a.favme.fa.fa-heart(href='#')
+                                    // Product Description
+                                    .product-description
+                                        span Bulova
+                                        a(href='single-product-details.html')
+                                            h6 Bulova Classic 96B015 - Zapatillas para hombre
+                                        p.product-price
+                                            span.old-price $175.00
+                                        // Hover Content
+                                        .hover-content
+                                            // Add to Cart
+                                            .add-to-cart-btn
+                                                a.btn.essence-btn(href='#') Add to Cart
+                            // Single Product
+                            .col-12.col-sm-6.col-lg-4
+                                .single-product-wrapper
+                                    // Product Image
+                                    .product-img
+                                        img(src='/public/vendors/img/product-img/product-6.jpg', alt='')
+                                        // Hover Thumb
+                                        img.hover-img(src='/public/vendors/img/product-img/product-66.jpg', alt='')
+                                        // Favourite
+                                        .product-favourite
+                                            a.favme.fa.fa-heart(href='#')
+                                    // Product Description
+                                    .product-description
+                                        span Citizen 
+                                        a(href='single-product-details.html')
+                                            h6 Citizen Watches Men's BN0151-09L Promaster Professional Diver
+                                        p.product-price $80.00
+                                        // Hover Content
+                                        .hover-content
+                                            // Add to Cart
+                                            .add-to-cart-btn
+                                                a.btn.essence-btn(href='#') Add to Cart
+                            // Single Product
+                            .col-12.col-sm-6.col-lg-4
+                                .single-product-wrapper
+                                    // Product Image
+                                    .product-img
+                                        img(src='/public/vendors/img/product-img/product-7.jpg', alt='')
+                                        // Hover Thumb
+                                        img.hover-img(src='/public/vendors/img/product-img/product-77.jpg', alt='')
+                                        // Product Badge
+                                        .product-badge.new-badge
+                                            span New
+                                        // Favourite
+                                        .product-favourite
+                                            a.favme.fa.fa-heart(href='#')
+                                    // Product Description
+                                    .product-description
+                                        span Casio
+                                        a(href='single-product-details.html')
+                                            h6 Casio "Super Illuminator" Resina de cuarzo reloj Casual de los hombres, color: negro (Modelo: aeq-200 W-9avcf)
+                                        p.product-price $80.00
+                                        // Hover Content
+                                        .hover-content
+                                            // Add to Cart
+                                            .add-to-cart-btn
+                                                a.btn.essence-btn(href='#') Add to Cart
+                            // Single Product
+                            .col-12.col-sm-6.col-lg-4
+                                .single-product-wrapper
+                                    // Product Image
+                                    .product-img
+                                        img(src='/public/vendors/img/product-img/product-8.jpg', alt='')
+                                        // Hover Thumb
+                                        img.hover-img(src='/public/vendors/img/product-img/product-88.jpg', alt='')
+                                        // Favourite
+                                        .product-favourite
+                                            a.favme.fa.fa-heart(href='#')
+                                    // Product Description
+                                    .product-description
+                                        span Invicta
+                                        a(href='single-product-details.html')
+                                            h6 Invicta 12847 reloj de acero inoxidable especial con banda azul para hombre
+                                        p.product-price $280.00
+                                        // Hover Content
+                                        .hover-content
+                                            // Add to Cart
+                                            .add-to-cart-btn
+                                                a.btn.essence-btn(href='#') Add to Cart
+                            // Single Product
+                            .col-12.col-sm-6.col-lg-4
+                                .single-product-wrapper
+                                    // Product Image
+                                    .product-img
+                                        img(src='/public/vendors/img/product-img/product-9.jpg', alt='')
+                                        // Hover Thumb
+                                        img.hover-img(src='/public/vendors/img/product-img/product-99.jpg', alt='')
+                                        // Favourite
+                                        .product-favourite
+                                            a.favme.fa.fa-heart(href='#')
+                                    // Product Description
+                                    .product-description
+                                        span Fossil 
+                                        a(href='single-product-details.html')
+                                            h6 Fossil Q Smart Watch (Modelo: FTW1149
+                                        p.product-price $80.00
+                                        // Hover Content
+                                        .hover-content
+                                            // Add to Cart
+                                            .add-to-cart-btn
+                                                a.btn.essence-btn(href='#') Add to Cart
+                    // Pagination
+                    nav(aria-label='navigation')
+                        ul.pagination.mt-50.mb-70
+                            li.page-item
+                                a.page-link(href='#')
+                                    i.fa.fa-angle-left
+                            li.page-item
+                                a.page-link(href='#') 1
+                            li.page-item
+                                a.page-link(href='#') 2
+                            li.page-item
+                                a.page-link(href='#') 3
+                            li.page-item
+                                a.page-link(href='#') ...
+                            li.page-item
+                                a.page-link(href='#') 21
+                            li.page-item
+                                a.page-link(href='#')
+                                    i.fa.fa-angle-right
+    // ##### Shop Grid Area End #####
+    // ##### Footer Area Start #####
+    footer.footer_area.clearfix
+        .container
+            .row
+                // Single Widget Area
+                .col-12.col-md-6
+                    .single_widget_area.d-flex.mb-30
+                        // Logo
+                        .footer-logo.mr-50
+                            a(href='#')
+                                img(src='/public/vendors/img/core-img/logo2.png', alt='')
+                        // Footer Menu
+                        .footer_menu
+                            ul
+                                li
+                                    a(href='shop.html') Shop
+                                li
+                                    a(href='blog.html') Blog
+                                li
+                                    a(href='contact.html') Contact
+                // Single Widget Area
+                .col-12.col-md-6
+                    .single_widget_area.mb-30
+                        ul.footer_widget_menu
+                            li
+                                a(href='#') Order Status
+                            li
+                                a(href='#') Payment Options
+                            li
+                                a(href='#') Shipping and Delivery
+                            li
+                                a(href='#') Guides
+                            li
+                                a(href='#') Privacy Policy
+                            li
+                                a(href='#') Terms of Use
+            .row.align-items-end
+                // Single Widget Area
+                .col-12.col-md-6
+                    .single_widget_area
+                        .footer_heading.mb-30
+                            h6 Subscribe
+                        .subscribtion_form
+                            form(action='#', method='post')
+                                input.mail(type='email', name='mail', placeholder='Your email here')
+                                button.submit(type='submit')
+                                    i.fa.fa-long-arrow-right(aria-hidden='true')
+                // Single Widget Area
+                .col-12.col-md-6
+                    .single_widget_area
+                        .footer_social_area
+                            a(href='#', data-toggle='tooltip', data-placement='top', title='Facebook')
+                                i.fa.fa-facebook(aria-hidden='true')
+                            a(href='#', data-toggle='tooltip', data-placement='top', title='Instagram')
+                                i.fa.fa-instagram(aria-hidden='true')
+                            a(href='#', data-toggle='tooltip', data-placement='top', title='Twitter')
+                                i.fa.fa-twitter(aria-hidden='true')
+                            a(href='#', data-toggle='tooltip', data-placement='top', title='Pinterest')
+                                i.fa.fa-pinterest(aria-hidden='true')
+                            a(href='#', data-toggle='tooltip', data-placement='top', title='Youtube')
+                                i.fa.fa-youtube-play(aria-hidden='true')
+            .row.mt-5
+                .col-md-12.text-center
+                    p
+                        // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+                        script.
+                            document.write(new Date().getFullYear());
+                        i.fa.fa-heart-o(aria-hidden='true')
+                        a(href='https://colorlib.com', target='_blank') Colorlib
+                        // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+    // ##### Footer Area End #####
+    // jQuery (Necessary for All JavaScript Plugins)
+    script(src='/public/vendors/js/jquery/jquery-2.2.4.min.js')
+    // Popper js
+    script(src='/public/vendors/js/popper.min.js')
+    // Bootstrap js
+    script(src='/public/vendors/js/bootstrap.min.js')
+    // Plugins js
+    script(src='/public/vendors/js/plugins.js')
+    // Classy Nav js
+    script(src='/public/vendors/js/classy-nav.min.js')
+    // Active js
+    script(src='/public/vendors/js/active.js')

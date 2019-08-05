@@ -1,0 +1,39 @@
+extends base.pug
+
+block  contenido
+
+    doctype html
+    .container
+    h2 login
+    form
+        input.name(type='text', placeholder='name' )
+        br
+        input.pwd(type='text', placeholder='Apellido' )
+        
+        br
+        input.email(type='email', placeholder='email' )
+        
+        br
+        input.pwd(type='', placeholder='password')
+        
+        br
+        input.name(type='text', placeholder='Direccion' )
+        
+        br
+        input.name(type='text', placeholder='Pais' )
+        
+    a.link(href='/user/login')
+    br
+    button.register(action='/router' method='POST')
+        span register
+    button.signin(method='POST')
+        span sign in 
+        a.link(href='/')
+    br
+    br
+    button
+        span Atras
+        a(href="/index")
+    br
+    h3.reg your registration is complete !    
+    h3.sig your sign in is complete !
