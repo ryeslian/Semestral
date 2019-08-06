@@ -13,7 +13,7 @@ module.exports = function(passport){
         });
     });
 //registrar usuario
-    passport.use('local-signup' , new localStrategy({
+    passport.use('signup' , new localStrategy({
         usernameField: 'mail',
         passwordField: 'password',
         passReqToCallback: true
@@ -41,7 +41,7 @@ module.exports = function(passport){
     ));
 
 //logear usuario
-passport.use('local-signin' , new localStrategy({
+passport.use('signin' , new localStrategy({
     usernameField: 'mail',
     passwordField: 'password',
     passReqToCallback: true

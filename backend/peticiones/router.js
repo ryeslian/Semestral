@@ -7,6 +7,7 @@ const user = require('../mdelos/model_user');
 const categories = require('../mdelos/model_categoria');
 const productosModel = require('../mdelos/model_producto');
 
+
 var upload = require('express-fileupload');
 
 app.use(upload({ useTempFiles: true }));

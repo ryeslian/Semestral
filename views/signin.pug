@@ -29,45 +29,30 @@ svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http
 
 .container
     h2 login
-    form
-        input.email(type='name', placeholder='name' id='nombre')
-        br
-        input.pwd(type='apellido', placeholder='Apellido' id='apellido')
+    form(id='signin-form')
+
+        input.email(type='email', placeholder='email' name='email')
         
         br
-        input.email(type='email', placeholder='email' id='email')
-        
-        br
-        input.email(type='password', placeholder='password' id='password')
-        
-        br
-        input.email(type='direccion', placeholder='Direccion' id='direccion')
-        
-        br
-        input.email(type='pais', placeholder='Pais' id='pais')
+        input.pwd(type='password', placeholder='password' name='password')
+
         
     //a.link(href='/user/login')
     br
-    button.register(action='/signin' method='POST')
-        span register
-    button.signin(action='user/create' method='POST')
+    br
+    button.signing(type='submit')
         span sign in 
-        a.link(href='/profile')
-    br
-    br
-    button
+        //a.link(href='/profile')
+
+    button.signin(type='submit')
         span Atras
-        a.link(href="/")
-    br
-    h3.reg your registration is complete !    
-    h3.sig your sign in is complete !
-    
-    
+        //a.link(href="/")
 
-
-    script(src="/public/vendors/js/login.js")
-    script(src='backend/peticiones/router.js')
-    script(src='backend/signin.js')
+        script(src="/public/vendors/js/login.js")
+        script(type='text/javascript' src='backend/peticiones/router.js')
+        script(type='text/javascript' src="/public/vendors/js/login.js")
+//        script(type='text/javascript' src='backend/peticiones/router.js')
+        script(type='text/javascript' src='backend/signin.js')
             
             
             

@@ -33,6 +33,7 @@ app.use(flash());
 // colocar en public las carpetas de style y script
 app.use('/public', express.static(path.join(__dirname, '/public')));
 
+
 //archivo  donde estaran todas las peticiones de cada servicio
 app.use(require('./backend/peticiones/router'));
 

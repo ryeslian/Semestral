@@ -8,7 +8,7 @@
             password: document.querySelector('.password'),
             direccion: document.querySelector('.direccion'),
             pais: document.querySelector('.pais'),
-            register: document.querySelector('.register'),
+            register: document.querySelector('#register'),
             // suma: document.querySelector('.suma'),
             //cadena: document.querySelector('.cadena'),
 
@@ -16,6 +16,7 @@
         Handlers: {
 
             OnClick: function(event) {
+                alert("hola mundo");
                 var data = {
                     nombre: nombre,
                     apellido: apellido,
@@ -23,7 +24,6 @@
                     password: password,
                     direccion: direccion,
                     pais: pais
-
                 }
                 console.log(data);
                 event.preventDefault();
@@ -34,7 +34,7 @@
                         type: 'POST',
                         url: '/user/create',
                         contentType: "application/json",
-                        data = data
+                        data: data
                     }).then(function(res) {
                         let data;
                         if (res.data != null) {
@@ -79,35 +79,32 @@
 
 
             },
-            Methods: {
-                init: function() {
-                    App.Methods.initExceptions();
-                    App.Methods.OnClick();
-                    App.Methods.OnClear();
-                },
-                initExceptions: function() {
-                    App.Exceptions.UserException.prototype.toString = function() {
-                        return `[${this.date}] ${this.name}: ${this.message}`;
-                    };
-                },
-                OnClick: function() {
-                    App.Controls.register.addEventListener('click', App.Handlers.OnClick)
-                        //App.Controls.data.addEventListener('click', App.Handlers.OnClick)
-                },
-                OnClear: function() {
-                    App.Controls.limpiar.addEventListener('click', App.Handlers.OnClear);
-                }
-            },
-            Events: {},
-            Helpers: {},
-            Exceptions: {
-                UserException: function(message) {
-                    this.message = message;
-                    this.name = 'UserException';
-                    this.date = new Date();
-                }
-            },
+
+
+
         },
+        Methods: {
+            init: function() {
+                //App.Methods.initExceptions();
+                App.Methods.OnClick();
+                //App.Methods.OnClear();
+            },
+            initExceptions: function() {
+                App.Exceptions.UserException.prototype.toString = function() {
+                    return `[${this.date}] ${this.name}: ${this.message}`;
+                };
+            },
+            OnClick: function() {
+
+                App.Controls.register.addEventListener('click', App.Handlers.OnClick)
+                    //App.Controls.data.addEventListener('click', App.Handlers.OnClick)
+            },
+            //OnClear: function() {
+            //  App.Controls.limpiar.addEventListener('click', App.Handlers.OnClear);
+            // }
+        },
+
     }
     App.Methods.init();
+
 })();
