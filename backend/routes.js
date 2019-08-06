@@ -43,6 +43,21 @@ module.exports = (app, passport) => {
     app.get('/acercade', (req, res) => {
         res.render('about')
     });
+
+    app.get('/usuario/:id', (req, res) => {
+        var id = req.params.id;
+        console.log(id);
+        res.render('signup')
+        req.flash('signupMessage')
+    });
+
+    app.get('/usuario/delete/:id', (req, res) => {
+        var id = req.params.id;
+        console.log(id);
+        res.render('signup')
+        req.flash('signupMessage')
+    });
+
     app.get('/logout', (req, res) => {
         req.logout();
         res.redirect('/');

@@ -26,32 +26,35 @@ svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http
         stop(offset='1', style='stop-color:#DF3D8E')
     circle(fill='url(#SVGID_5_)', cx='435.095', cy='184.986', r='63.504')
 .container
-    #register.form
-    form(autocomplete='on')
-        h1  Registro
-        p
-            label.uname(for='usernamesignup') Tu nombre
-            input#usernamesignup(name='nombre', required='required', type='text', placeholder='Nombre')
-        p
-            label.uname(for='usernamesignup') Tu nombre
-            input#usernamesignup(name='apellido', required='required', type='text', placeholder='Apellido')
-        p
-            label.youmail(for='emailsignup')  Tu email
-            input#emailsignup(name='email', required='required', type='email', placeholder='ejemplo@mail.com')
-        p
-            label.youpasswd(for='passwordsignup') Tu password 
-            input#passwordsignup(name='password', required='required', type='password' )
-        p
-            label.uname(for='usernamesignup') Tu direccion
-            input#usernamesignup(name='direccion', required='required', type='text', placeholder='direccion')
-        p
-            label.uname(for='usernamesignup') Tu pais
-            input#usernamesignup(name='pais', required='required', type='text', placeholder='pais')
-        p.signin.button
-            input(type='submit', value='Register')
-        p.change_link
-            a.to_register(href='#profile')  Logu&eacute;ate 
-    //script(src="/public/vendors/js/login.js")
+     
+    h1  Registro
+    p
+        label.uname(for='usernamesignup') Tu nombre
+        input.nombre(name='nombre', required='required', type='text', placeholder='Nombre')
+    p
+        label.uname(for='usernamesignup') Tu nombre
+        input.apellido(name='apellido', required='required', type='text', placeholder='Apellido')
+    p
+        label.youmail(for='emailsignup')  Tu email
+        input.email(name='email', required='required', type='email', placeholder='ejemplo@mail.com')
+    p
+        label.youpasswd(for='passwordsignup') Tu password 
+        input.password(name='password', required='required', type='password' )
+    p
+        label.direccionA(for='usernamesignup') Tu direccion
+        input.direccion(name='direccion', required='required', type='text', placeholder='direccion')
+    p
+        label.uname(for='usernamesignup') Tu pais
+        input.pais(name='pais', required='required', type='text', placeholder='pais')
+    p.signin.button
+        button.registrar |Registrar
+    p.change_link
+    a.to_register(href='#profile')  Logu&eacute;ate 
+    br
+    br
+    .caja
+
+    script(src="/public/vendors/js/jquery-3.2.1.min.js")
     script(src="/public/peticiones/register.js")
         
                 
