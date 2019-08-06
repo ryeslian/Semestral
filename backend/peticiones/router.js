@@ -172,7 +172,7 @@ app.put('/user/update/:id', (req, res) => {
     //underscore pick solo coloca los campos que se quieren actualizar en la base de datos
     var request = req.body;
     var id = req.params.id
-    Usuario.findByIdAndUpdate(id, request, { new: true, runValidators: true, context: 'query' }, (err, user) => {
+    user.findByIdAndUpdate(id, request, { new: true, runValidators: true, context: 'query' }, (err, user) => {
         if (err) {
             res.json({
                 success: false,

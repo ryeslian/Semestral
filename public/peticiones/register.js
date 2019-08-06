@@ -1,4 +1,4 @@
- 
+
 
 (function () {
     var App = {
@@ -12,7 +12,8 @@
             password: document.querySelector('.password'),
             direccion: document.querySelector('.direccion'),
             pais: document.querySelector('.pais'),
-            register: document.querySelector('.registrar'),
+            registrar: document.querySelector('.registrar'), // boton para crear
+            actualizar: document.querySelector('.registrar'), // boton para registrar , este no esta pero ya hize las pruebas
             caja: document.querySelector('.caja'),
             //cadena: document.querySelector('.cadena'),
 
@@ -53,11 +54,42 @@
                     );
                 console.log(event);
             },
-            OnClear: function () {
-                App.Controls.value = '';
-                App.Controls.data.innerHTML = ``;
-                App.Controls.nombre.innerHTML = ``;
+
+            update_usuario: function (event) {
+
+                var data = {
+                    nombre: App.Controls.nombre.value,
+                    apellido: App.Controls.apellido.value,
+                    email: App.Controls.email.value,
+                    password: App.Controls.password.value,
+                    direccion: App.Controls.direccion.value,
+                    pais: App.Controls.pais.value
+                }
+
+                event.preventDefault();
+
+
+                $.ajax({
+                    type: 'PUT',
+                    url: '/user/update/' + App.Data.id,
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    data: JSON.stringify(data),
+                }).then(function (res) {
+                    App.Controls.caja.innerHTML = '';
+                    App.Methods.get_user();
+                    console.log(res);
+                })
+                    .catch(
+                        function (error) {
+                            App.Controls.email.innerHTML = error;
+                        }
+                    );
+                console.log(event);
             },
+
 
         },
         Methods: {
@@ -73,7 +105,7 @@
                 console.log(isNaN(App.Data.id));
                 if (App.Data.id != null) {
                     App.Methods.get_one_user();
-                    App.Methods.delete_user();
+                    // App.Methods.delete_user();
                 } else {
                     App.Methods.get_user();
                 }
@@ -85,7 +117,8 @@
             },
             OnClick: function () {
 
-                App.Controls.register.addEventListener('click', App.Handlers.OnClick)
+                App.Controls.register.addEventListener('click', App.Handlers.OnClick) // create
+                App.Controls.actualizar.addEventListener('click', App.Handlers.update_usuario) // actualizar
                 //App.Controls.data.addEventListener('click', App.Handlers.OnClick)
             },
 
@@ -99,8 +132,8 @@
                 ).then((data) => {
                     console.log(data.user);
                     for (let index = 0; index < data.user.length; index++) {
-                        App.Controls.caja.innerHTML += '<br>' + '<a  href="/usuario/' + data.user[index]._id + '">' + data.user[index].nombre + '</a>' + 
-                        '<a  href="/usuario/delete/' + data.user[index]._id + '">Eliminar</a>';
+                        App.Controls.caja.innerHTML += '<br>' + '<a  href="/usuario/' + data.user[index]._id + '">' + data.user[index].nombre + '</a>' +
+                            '<a  href="/usuario/delete/' + data.user[index]._id + '">Eliminar</a>';
                     }
                 }).catch((err) => {
 
@@ -129,14 +162,14 @@
 
             },
 
-            delete_user : function(){
+            delete_user: function () {
                 $.ajax({ url: `/user/delete/${App.Data.id}`, method: "DELETE" })
-                .then(function (data) {
-                    console.log(data);
-                })
-                .catch(function (err) {
-                   
-                });
+                    .then(function (data) {
+                        console.log(data);
+                    })
+                    .catch(function (err) {
+
+                    });
             }
             //OnClear: function() {
             //  App.Controls.limpiar.addEventListener('click', App.Handlers.OnClear);
